@@ -1,20 +1,15 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class Resumen implements Comparable<Producto> {
-    private ArrayList listaDeCompras;
+public class Resumen{
+    private List listaDeCompras;
 
-    public Resumen(ArrayList listaDeCompras) {
-        this.listaDeCompras = listaDeCompras;
+    public Resumen(List<Producto> listaDeCompras) {
+        this.listaDeCompras = (ArrayList) listaDeCompras;
     }
 
     public void agregarProductos(Producto producto){
         listaDeCompras.add(producto);
     }
 
-
-
-    @Override
-    public int compareTo(Producto o) {
-        return 0;
-    }
 }

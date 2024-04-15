@@ -13,6 +13,10 @@ public class Tarjeta {
       this.limiteDeCompra = limiteDeCompra;
    }
 
+   public void pagar(double precioDeCompra){
+      this.limiteDeCompra-=precioDeCompra;
+   }
+
    @Override
    public String toString() {
       return  "Saldo: $ " + limiteDeCompra;
