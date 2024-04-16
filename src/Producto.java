@@ -1,4 +1,4 @@
-public class Producto {
+public class Producto implements Comparable<Producto>{
     private String descripcion;
     private double precio;
 
@@ -13,6 +13,12 @@ public class Producto {
 
     public double getPrecio() {
         return precio;
+    }
+
+    /*Casteo a objeto clase wrapper para obtener superpoderes, entre ellos value of*/
+    @Override
+    public int compareTo(Producto o) {
+        return Double.valueOf(this.precio).compareTo(Double.valueOf(o.getPrecio()));
     }
 
     @Override
