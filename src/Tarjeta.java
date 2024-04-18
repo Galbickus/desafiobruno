@@ -3,11 +3,8 @@ import java.util.*;
 public class Tarjeta {
    private double limiteDeCompra;
    private double saldo;
-
    private List<Producto>listaDeCompra;
-
    /*OJO Bruno instancia el Array en el constructor*/
-
    public Tarjeta(double limiteDeCompra) {
       this.limiteDeCompra = limiteDeCompra;
       this.saldo = limiteDeCompra;

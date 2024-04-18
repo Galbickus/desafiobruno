@@ -12,7 +12,6 @@ public class Principal {
         Tarjeta tarjeta = new Tarjeta(limiteDeCompra);
 
         do {
-
             System.out.println("Ingrese la descripción del producto: ");
             String descripcion = teclado.next();
 
@@ -23,21 +22,17 @@ public class Principal {
             boolean autorizacion = tarjeta.autorizarCompra(productoAComprar);
 
             if (autorizacion){
-
                 System.out.println("¡Compra realizada! ");
                 tarjeta.pagar(precio);
                 listaDeCompras.add(productoAComprar);
-
             }else {
                 System.out.println("Saldo INSUFICIENTE para este producto.");
-
             }
-
             System.out.println("Si desea salir ingrese 0, para continuar ingrese 1");
             opcion = teclado.nextInt();
         }while (opcion != 0);
 
-        System.out.println("*****   S A L D O   *****\n");
+        System.out.println("******   S A L D O   ******\n");
         System.out.println("$ " + tarjeta.getLimiteDeCompra());
         System.out.println("\n*****   DETALLE DE COMPRAS (ordenados del más barato al más caro)   *****\n");
         Collections.sort(tarjeta.getListaDeCompra());
